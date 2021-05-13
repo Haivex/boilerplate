@@ -13,6 +13,9 @@
   "devDependencies": {
     "@commitlint/cli": "^12.1.4",
     "@commitlint/config-conventional": "^12.1.4",
+    "@swc/cli": "^0.1.40",
+    "@swc/core": "^1.2.57",
+    "chokidar": "^3.5.1",
     "husky": "^6.0.0",
     "jest": "^26.6.3",
     "stylelint": "^13.13.1",
