@@ -6,7 +6,8 @@
   "scripts": {
     "prepare": "husky install",
     "test": "jest",
-    "stylelint": "npx stylelint **/*.css"
+    "stylelint": "npx stylelint **/*.css",
+    "swc:compile": "npx swc product.ts -o output.js"
   },
   "author": "",
   "license": "ISC",
@@ -15,6 +16,7 @@
     "@commitlint/config-conventional": "^12.1.4",
     "@swc/cli": "^0.1.40",
     "@swc/core": "^1.2.57",
+    "@swc/jest": "^0.1.2",
     "chokidar": "^3.5.1",
     "husky": "^6.0.0",
     "jest": "^26.6.3",
