@@ -1,5 +1,4 @@
-function product(a: number, b: number): number {
+export function product(a: number, b: number): number {
+  console.log("I product");
   return a + b;
 }
-
-console.log(product(2, 3));
