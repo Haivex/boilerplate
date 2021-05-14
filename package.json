@@ -11,7 +11,9 @@
     "prettier:check": "npx prettier --check"
   },
   "lint-staged": {
-    "**/*": "prettier --write --ignore-unknown"
+    "**/*.css": ["stylelint", "prettier --write --ignore-unknown"],
+    "**/*.scss": ["stylelint --syntax=scss", "prettier --write --ignore-unknown"],
+    "**/*.ts?(x)": ["prettier --write --ignore-unknown"]
   },
   "author": "",
   "license": "ISC",
