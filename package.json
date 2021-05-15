@@ -9,23 +9,23 @@
     "build": "esbuild src/index.ts --bundle --minify --sourcemap --loader:.png=dataurl --loader:.svg=text --target=chrome58,firefox57,safari11,edge16 --outdir=build",
     "watch": "esbuild src/index.ts --bundle --loader:.png=dataurl --loader:.svg=text --outdir=build --watch",
     "stylelint": "npx stylelint **/*.css",
-    "prettier": "npx prettier --write src/",
-    "prettier:check": "npx prettier --check",
+    "prettier": "npx prettier --write src/**/*.*",
+    "prettier:check": "npx prettier --check src/**/*.*",
     "lint": "eslint --ext js,jsx,ts,tsx src",
     "lint:fix": "eslint --ext js,jsx,ts,tsx src --fix"
   },
   "lint-staged": {
     "**/*.css": [
       "stylelint",
-      "prettier --write --ignore-unknown"
+      "npm run prettier"
     ],
     "**/*.scss": [
       "stylelint --syntax=scss",
-      "prettier --write --ignore-unknown"
+      "npm run prettier"
     ],
     "**/*.ts?(x)": [
       "npm run lint:fix",
-      "prettier --write --ignore-unknown"
+      "npm run prettier"
     ]
   },
   "author": "",
