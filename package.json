@@ -6,8 +6,8 @@
   "scripts": {
     "prepare": "husky install",
     "test": "jest",
-    "build": "esbuild src/index.ts --bundle --minify --sourcemap --loader:.png=dataurl --loader:.svg=text --target=chrome58,firefox57,safari11,edge16 --outdir=build",
-    "watch": "esbuild src/index.ts --bundle --loader:.png=dataurl --loader:.svg=text --outdir=build --watch",
+    "build": "node build.js",
+    "watch": "node build.js --watch",
     "stylelint": "npx stylelint **/*.css",
     "prettier": "npx prettier --write src/**/*.*",
     "prettier:check": "npx prettier --check src/**/*.*",
