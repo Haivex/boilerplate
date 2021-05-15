@@ -1,8 +1,6 @@
 import url from "./image.png";
-import { product } from "./product";
-import css from "./index.css";
-console.log(product(2, 5));
+import product from "./product";
 
-let image = new Image();
+product(2, 5);
+const image = new Image();
 image.src = url;
-console.log(image.src);

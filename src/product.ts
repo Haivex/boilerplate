@@ -1,4 +1,3 @@
-export function product(a: number, b: number): number {
-  console.log("I product");
+export default function product(a: number, b: number): number {
   return a + b;
 }
