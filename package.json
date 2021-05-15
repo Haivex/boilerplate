@@ -24,6 +24,7 @@
       "prettier --write --ignore-unknown"
     ],
     "**/*.ts?(x)": [
+      "lint:fix",
       "prettier --write --ignore-unknown"
     ]
   },
