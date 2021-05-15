@@ -1,0 +1,10 @@
+{
+    "editor.detectIndentation": true,
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "prettier.singleQuote": true,
+    "prettier.endOfLine": "lf",
+    "files.encoding": "utf8",
+    "files.trimTrailingWhitespace": true,
+    "files.insertFinalNewline": true,
+}
