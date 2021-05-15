@@ -24,7 +24,7 @@
       "prettier --write --ignore-unknown"
     ],
     "**/*.ts?(x)": [
-      "lint:fix",
+      "npm run lint:fix",
       "prettier --write --ignore-unknown"
     ]
   },
