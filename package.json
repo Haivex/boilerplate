@@ -6,7 +6,7 @@
   "scripts": {
     "prepare": "husky install",
     "test": "jest",
-    "build": "node build.js",
+    "build": "ncp src/static build && node build.js",
     "watch": "node build.js --watch",
     "stylelint": "npx stylelint **/*.css",
     "prettier": "npx prettier --write src/**/*.*",
@@ -53,6 +53,7 @@
     "stylelint-config-standard": "^22.0.0"
   },
   "dependencies": {
-    "esbuild": "^0.11.20"
+    "esbuild": "^0.11.20",
+    "ncp": "^2.0.0"
   }
 }
