@@ -8,4 +8,6 @@
     "files.trimTrailingWhitespace": true,
     "files.insertFinalNewline": true,
     "editor.formatOnSave": true,
+    "files.eol": "\n",
+    "html.format.endWithNewline": true,
 }
