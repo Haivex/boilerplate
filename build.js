@@ -3,7 +3,7 @@ const esbuild = require('esbuild');
 const isWatch = process.argv.includes('--watch');
 
 const serveConfig = {
-  servedir: 'build',
+  servedir: 'src/static',
   port: 8000,
 };
 
@@ -16,7 +16,7 @@ const bundlerConfig = {
     '.png': 'dataurl',
     '.svg': 'text',
   },
-  outdir: 'build',
+  outdir: 'build/js',
   plugins: [],
   target: ['chrome58', 'firefox57', 'safari11', 'edge16'],
 };
@@ -24,7 +24,7 @@ const bundlerConfig = {
 /* eslint-disable no-console */
 
 if (isWatch) {
-  esbuild.serve(serveConfig, bundlerConfig).catch((err) => {
+  esbuild.serve(serveConfig, { ...bundlerConfig, outdir: 'src/static/js' }).catch((err) => {
     console.log('\x1b[31m%s\x1b[0m', err);
     process.exit(1);
   });
