@@ -17,15 +17,15 @@
   "lint-staged": {
     "**/*.css": [
       "stylelint",
-      "npm run prettier"
+      "prettier --write"
     ],
     "**/*.scss": [
       "stylelint --syntax=scss",
-      "npm run prettier"
+      "prettier --write"
     ],
     "**/*.ts?(x)": [
-      "npm run lint:fix",
-      "npm run prettier"
+      "eslint --fix",
+      "prettier --write"
     ]
   },
   "author": "",
