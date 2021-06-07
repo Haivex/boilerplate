@@ -6,6 +6,7 @@
   "scripts": {
     "prepare": "husky install",
     "test": "jest",
+    "test:dev": "jest --watchAll",
     "build": "ncp src/static build && node build.js",
     "watch": "node build.js --watch",
     "stylelint": "npx stylelint **/*.css",
@@ -17,15 +18,15 @@
   "lint-staged": {
     "**/*.css": [
       "stylelint",
-      "npm run prettier"
+      "prettier --write"
     ],
     "**/*.scss": [
       "stylelint --syntax=scss",
-      "npm run prettier"
+      "prettier --write"
     ],
     "**/*.ts?(x)": [
-      "npm run lint:fix",
-      "npm run prettier"
+      "eslint --fix",
+      "prettier --write"
     ]
   },
   "author": "",
@@ -33,12 +34,14 @@
   "devDependencies": {
     "@commitlint/cli": "^12.1.4",
     "@commitlint/config-conventional": "^12.1.4",
+    "@types/jest": "^26.0.23",
     "@typescript-eslint/eslint-plugin": "^4.23.0",
     "@typescript-eslint/parser": "^4.23.0",
     "chokidar": "^3.5.1",
     "eslint": "^7.26.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-config-airbnb-typescript": "^12.3.1",
+    "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-import": "^2.23.1",
     "eslint-plugin-jest": "^24.3.6",
     "eslint-plugin-jsx-a11y": "^6.4.1",
@@ -50,7 +53,9 @@
     "prettier": "2.3.0",
     "stylelint": "^13.13.1",
     "stylelint-config-recommended": "^5.0.0",
-    "stylelint-config-standard": "^22.0.0"
+    "stylelint-config-standard": "^22.0.0",
+    "ts-jest": "^27.0.3",
+    "typescript": "^4.3.2"
   },
   "dependencies": {
     "esbuild": "^0.11.20",
